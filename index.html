@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lukas Haußmann (Haussmann) · TUM</title>
+  <meta name="description" content="Lukas Haußmann (Haussmann), M.Sc. Data Engineering and Analytics student at the Technical University of Munich (TUM). Database workloads on GPUs in LingoDB, 3D reconstruction and computer vision projects.">
+  <link rel="canonical" href="https://lukashaussmann.github.io/">
+
+  <!-- link previews (LinkedIn, Slack, X, ...) -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Lukas Haußmann">
+  <meta property="og:description" content="M.Sc. Data Engineering and Analytics student at TUM. Research and projects.">
+  <meta property="og:url" content="https://lukashaussmann.github.io/">
+  <meta property="og:image" content="https://lukashaussmann.github.io/assets/photo.jpg">
+  <meta name="twitter:card" content="summary">
+
+  <!-- structured data: who this page is about -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Lukas Haußmann",
+    "alternateName": "Lukas Haussmann",
+    "url": "https://lukashaussmann.github.io/",
+    "image": "https://lukashaussmann.github.io/assets/photo.jpg",
+    "email": "mailto:lukas.haussmann@tum.de",
+    "jobTitle": "Student Research Assistant",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Technical University of Munich",
+      "alternateName": "TUM",
+      "url": "https://www.tum.de"
+    },
+    "knowsAbout": ["Database systems", "GPU programming", "Performance optimization", "Computer vision", "3D reconstruction", "Gaussian Splatting", "Inverse rendering"],
+    "sameAs": [
+      "https://github.com/LukasHaussmann",
+      "https://www.linkedin.com/in/lukas-haussmann"
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+
+    <!-- ===== Header ===== -->
+    <header class="intro">
+      <img class="photo" src="assets/photo.jpg" alt="Lukas Haußmann">
+      <div class="bio">
+        <h1>Lukas Haußmann</h1>
+        <p class="role">M.Sc. Data Engineering and Analytics · Technical University of Munich</p>
+        <p>
+          I'm a Master's student at TUM and a student research assistant in
+          the TUM Database Group, where I work on bringing database workloads
+          to GPUs with <a href="https://www.lingo-db.com" target="_blank" rel="noopener">LingoDB</a>. I'm interested in
+          data processing and computer vision research. Before that, I interned
+          as a software engineer at Snowflake in Berlin.
+        </p>
+        <p class="links">
+          <a href="mailto:lukas.haussmann@tum.de">Email</a>
+          <a href="https://github.com/LukasHaussmann" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/lukas-haussmann" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+    </header>
+
+    <!-- ===== Projects ===== -->
+    <section>
+      <h2>Projects</h2>
+      <div class="projects">
+        <!-- Copy one <article> per project. The second <img> appears on hover. -->
+        <article class="project">
+          <div class="teaser">
+            <img src="assets/pbr-input.jpg" alt="Photo of snacks on a kitchen counter">
+            <img src="assets/pbr-albedo.jpg" alt="Estimated albedo of the same scene" class="hover">
+          </div>
+          <div>
+            <h3><a class="title-link" href="projects/pbr-from-relightings/">PBR Estimation with Diffusion-generated Relightings</a></h3>
+            <p>Material estimation from a single photo: an image model (Flux, GPT-Image-2) relights the scene, then inverse rendering with a Cook-Torrance renderer recovers albedo, roughness and metallic that explain every relighting.</p>
+            <p class="meta">with Felix Laarmann and Matthias Nießner · TUM Visual Computing &amp; AI Lab</p>
+            <p class="tags"><a href="projects/pbr-from-relightings/">page</a><a href="assets/pbr-relightings-report.pdf" target="_blank" rel="noopener">report</a><a href="assets/pbr-relightings-poster.pdf" target="_blank" rel="noopener">poster</a></p>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="teaser">
+            <img src="assets/isr-meshes.jpg" alt="Four DTU meshes reconstructed by our method: teddy bear, birds, skull, Buddha">
+          </div>
+          <div>
+            <h3><a class="title-link" href="projects/instant-surface-reconstruction/">Instant Surface Reconstruction</a></h3>
+            <p>Dense initialization for 2D Gaussian Splatting: triangulated feature matches, estimated normals and depth filtering give well-placed surfels from iteration zero. Matches fully trained 2DGS on DTU (0.74 mm Chamfer) in 2 minutes instead of 15.</p>
+            <p class="meta">with Jon Ayo Gieß · supervised by Lukas Höllein · TUM Visual Computing &amp; AI Lab</p>
+            <p class="tags"><a href="projects/instant-surface-reconstruction/">page</a><a href="assets/instant-surface-reconstruction-report.pdf" target="_blank" rel="noopener">report</a><a href="assets/instant-surface-reconstruction-poster.pdf" target="_blank" rel="noopener">poster</a><a href="https://github.com/LukasHaussmann/2d-gaussian-splatting/tree/old_initialization" target="_blank" rel="noopener">code</a></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Publications ===== -->
+    <section>
+      <h2>Publications</h2>
+      <ul class="pubs">
+        <li>
+          <span class="pub-title">Evaluating Apple Silicon for Data Processing</span>
+          <span class="authors">Alexander Beischl*, Mykola Morozov*, Michael Jungmair, <b>Lukas Haußmann</b>, Thomas Neumann</span>
+          <span class="venue">DaMoN '26 (Workshop on Data Management on New Hardware) · <a href="https://db.in.tum.de/~beischl/papers/Evaluating_Apple_Silicon_for_Data_Processing.pdf" target="_blank" rel="noopener">pdf</a> · <a href="https://doi.org/10.1145/3789237.3809127" target="_blank" rel="noopener">doi</a></span>
+        </li>
+      </ul>
+      <p class="note">* equal contribution</p>
+    </section>
+
+    <footer class="mono">© 2026 Lukas Haußmann</footer>
+  </main>
+</body>
+</html>
